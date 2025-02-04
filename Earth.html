@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+    <head><title>Earth</title>
+        <style>
+            body {
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: black;
+                overflow: hidden;
+            }
+
+            .gfg {
+            top: 60%;
+            left: 40%;
+            bottom: 50%;
+            height: 12px;
+            width: 12px;
+            background-color: white;
+            border-radius: 80%;
+            box-shadow: 12em 54em 3px 4px white, 38vw -4vh 2px 5px white,
+                -20vw -148vh 8px 4px white, -39vw 38vh 4px 10px white,
+                -42vw -11vh 4px 13px white, 12vw 15vh 3px 3px white,
+                42vw 6vh 3px 2px white, -8vw 9vh 0px 2px white,
+                34vw -38vh 1px 0px white, -17vw 45vh 3px 1px white,
+                82vw -36vh 3px 10px white, -42vw 1vh 1px 0px white,
+                42vw -26vh 3px 10px white, 87vh 5px 10px white,
+                30em 54em 3px 4px white, 25vw -4vh 2px 5px white,
+                -20vw -148vh 8px 4px white, 56vw 30vh 4px 10px white,
+                -24vw -11vh 4px 13px white, 22vw 50vh 3px 3px white,
+                24vw 6vh 3px 2px white, -18vw 9vh 0px 2px white,
+                23vw -38vh 1px 0px white, -70vw 45vh 3px 1px white,
+                27vw -36vh 3px 10px white, -24vw 1vh 1px 0px white,
+                32vw -26vh 3px 10px white, 43vh 5px 10px white, 
+                12em 35em 3px 4px white, 31vw -4vh 2px 5px white,
+                -12vw -148vh 8px 4px white, -39vw 38vh 4px 10px white,
+                -22vw -11vh 4px 13px white, 12vw 35vh 3px 3px white,
+                22vw 6vh 3px 2px white, -8vw 39vh 0px 2px white,
+                32vw -30vh 1px 0px white, -11vw 45vh 3px 1px white,
+                28vw -36vh 3px 10px white, -22vw 1vh 1px 0px white,
+                24vw -26vh 3px 10px white, 78vh 5px 10px white,
+                38em 54em 3px 4px white, 52vw -4vh 2px 5px white,
+                -29vw -148vh 8px 4px white, 56vw 50vh 4px 10px white,
+                -18vw -11vh 4px 13px white, 22vw 40vh 3px 3px white,
+                30vw 6vh 3px 2px white, -18vw 19vh 0px 2px white,
+                23vw -38vh 1px 0px white, -57vw 45vh 3px 1px white,
+                62vw -36vh 3px 10px white, -14vw 1vh 1px 0px white,
+                33vw 20vh 3px 10px white, 13vh 5px 10px white;
+        }
+
+            .container {
+                font-size: 10px;
+                width: 40em;
+                height: 40em;
+                position: relative;
+            }
+
+            .sun {
+                position: absolute;
+                top: 15em;
+                left: 15em;
+                width: 10em;
+                height: 10em;
+                background-color: yellow;
+                border-radius: 50%;
+                box-shadow: 0 0 3em  white;
+            }
+
+            .earth, .moon {
+                position: absolute;
+                border-style: solid;
+                border-color: white transparent transparent transparent;
+                border-width: 0.1em 0.1em 0 0;
+                border-radius: 50%;
+            }
+
+            .earth {
+                top: 5em;
+                left: 5em;
+                width: 30em;
+                height: 30em;
+                animation: orbit 36.5s linear infinite;
+            }
+
+            .moon {
+                top: 0;
+                right: 0;
+                width: 8em;
+                height: 8em;
+                animation: orbit 2.7s linear infinite;
+            }
+
+            .earth::before,
+            .moon::before {
+                content: "";
+                position: absolute;
+                border-radius: 50%;
+            }
+
+            .earth::before {
+                top: 2.8em;
+                right: 2.8em;
+                width: 3em;
+                height: 3em;
+                background-color: aqua;
+            }
+
+            .moon::before {
+                top: 0.8em;
+                right: 0.2em;
+                width: 1.2em;
+                height: 1.2em;
+                background-color: silver;
+            }
+
+            @keyframes orbit {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="gfg">
+            <div class="sun"><h1><font color="RED">SUN</font></h1></div>
+            <div class="earth"><h2><font color="RED">EARTH</font></h2>
+            <div class="moon"><h3><font color="RED">MOON</font></h3></div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </body>
+</html>
